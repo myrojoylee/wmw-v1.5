@@ -89,7 +89,7 @@ const App = (): JSX.Element => {
   }
 
   return (
-    <main className="flex justify-center items-center w-full flex-col h-[100vh] space-y-10">
+    <main className="flex justify-center items-center w-full flex-col h-[100vh] space-y-10 bg-gradient-to-r from-cyan-500 to-blue-500">
       <Header />
       <section className="flex flex-col w-1/2 space-y-2">
         <input
@@ -100,7 +100,7 @@ const App = (): JSX.Element => {
           onChange={handleInput}
         />
         <button
-          className="border-black border-2 rounded-md"
+          className="text-white bg-blue-900 border-black border-2 rounded-md hover:bg-slate-100 hover:text-black"
           onClick={() => handleSubmit(input)}
         >
           Click to see if it'll snow, rain, or be swelteringly hot!
@@ -129,7 +129,7 @@ const App = (): JSX.Element => {
           </section>
           <button
             onClick={() => handleVerdict(currentWeather?.main.temp)}
-            className="bg-slate-300 border-blue border-2 rounded-md px-1"
+            className="text-white bg-blue-900 border-black border-2 rounded-md hover:bg-slate-100 hover:text-black px-1"
           >
             Click for a TL;DR
           </button>
@@ -143,21 +143,16 @@ const App = (): JSX.Element => {
         <>
           <section className="flex flex-col w-1/2">
             <p>
-              City:{" "}
-              <span className="font-mono">No city matching what you typed</span>
+              City: <span className="font-mono">Loading...</span>
             </p>
             <p>
-              Weather:{" "}
-              <span className="font-mono">
-                ...so that means we have no weather
-              </span>
+              Weather: <span className="font-mono">Loading...</span>
             </p>
             <p>
-              Temp:{" "}
-              <span className="font-mono">Your guess is as good as ours</span>
+              Temp: <span className="font-mono">Loading...</span>
             </p>
           </section>
-          <button className="flex border-blue border-2 rounded-md disabled:opacity-25 px-1 cursor-no-drop">
+          <button className="text-white bg-blue-900 border-black border-2 rounded-md disabled:opacity-25 px-1 cursor-no-drop">
             Waiting for your weather...
           </button>
           {verdict ? (
