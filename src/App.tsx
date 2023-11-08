@@ -71,22 +71,30 @@ const App = (): JSX.Element => {
     return currentWeather;
   };
 
-  // tl;dr message
+  // tl;dr message based on temp
+  // msg stays the same even after conversion
   const handleVerdict = async (data: number) => {
     setVerdict("");
-
-    try {
-      if (data > 30 && data <= 50) {
+    if (conversion) {
+      if (data > 32 && data <= 50) {
         setVerdict("Pants and a jacket!");
       } else if (data > 50 && data < 70) {
         setVerdict("Light jacket, maybe shorts for some!");
       } else if (data > 70) {
         setVerdict("It's gonna be a warm one...");
-      } else if (data < 30) {
+      } else if (data < 32) {
         setVerdict("Time to bring out that heavy jacket or coat!");
       }
-    } catch (e) {
-      console.error(e);
+    } else {
+      if (data > 0 && data <= 10) {
+        setVerdict("Pants and a jacket!");
+      } else if (data > 10 && data < 21.1) {
+        setVerdict("Light jacket, maybe shorts for some!");
+      } else if (data > 21.1) {
+        setVerdict("It's gonna be a warm one...");
+      } else if (data < 0) {
+        setVerdict("Time to bring out that heavy jacket or coat!");
+      }
     }
   };
 
