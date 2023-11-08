@@ -2,10 +2,12 @@
   "compilerOptions": {
     "target": "ES2016",
     "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true,
     "module": "commonjs",
     "skipLibCheck": true,
     "outDir": "../dist",
     "esModuleInterop": true,
+    "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
     "types": ["node", "vite/client"]
