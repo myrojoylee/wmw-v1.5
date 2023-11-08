@@ -1,5 +1,6 @@
 import { useState, ChangeEvent } from "react";
 import { cityInfoType, currentWeatherType } from "./types";
+import Header from "./components/Header";
 
 const App = (): JSX.Element => {
   const [input, setInput] = useState<string>("");
@@ -61,9 +62,7 @@ const App = (): JSX.Element => {
 
   return (
     <main className="flex justify-center items-center w-full flex-col h-[100vh] space-y-10">
-      <h1 className="flex text-center font-mono text-xl font-bold">
-        Tell me if it's hot or cold
-      </h1>
+      <Header />
       <section className="flex flex-col w-1/2 space-y-2">
         <input
           type="text"
