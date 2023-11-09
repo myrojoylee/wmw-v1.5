@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
   const [placeholder, setPlaceholder] = useState<string>("Where you at?");
   const [temp, setTemp] = useState<number>();
   const [conversion, setConversion] = useState<boolean>(true);
-  const [convertMessage, setConvertMessage] = useState<string>("convert to C");
+  const [convertMessage, setConvertMessage] = useState<string>("");
   const [degreeUnit, setDegreeUnit] = useState<string>(" deg F");
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -104,6 +104,7 @@ const App = (): JSX.Element => {
       const data = await getCoordinates(input);
       await getCurrentWeatherMetric(data[0]);
 
+      setVerdict("Loading...");
       setConvertMessage("convert to F");
       setDegreeUnit(" deg C");
       setConversion(false);
@@ -123,6 +124,10 @@ const App = (): JSX.Element => {
       return;
     } else {
       try {
+        setVerdict("Loading...");
+        setDegreeUnit(" deg F");
+        setConvertMessage("convert to C");
+        setConversion(true);
         const data = await getCoordinates(input);
         await getCurrentWeather(data[0]);
         const tempData = currentWeather?.main?.temp;
