@@ -10,7 +10,7 @@ This work in progress can be found deployed [here](https://wmw-v1.netlify.app/).
 
 Demo below:
 
-<img src="https://github.com/myrojoylee/tic-tac-toe/blob/main/src/assets/wmw-v1-demo.gif" width = "400" />
+<img src="https://github.com/myrojoylee/wmw-v1.5/blob/main/src/assets/wmw-v1-demo.gif" width = "400" />
 
 ## Improvements
 
