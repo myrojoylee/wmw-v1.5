@@ -8,7 +8,7 @@ const App = (): JSX.Element => {
   const [currentWeather, setCurrentWeather] =
     useState<currentWeatherType | null>(null);
   const [verdict, setVerdict] = useState<string>("Loading...");
-  const [placeholder, setPlaceholder] = useState<string>("Where you at?");
+  const [placeholder, setPlaceholder] = useState<string>("Type a city");
   const [temp, setTemp] = useState<number>();
   const [conversion, setConversion] = useState<boolean>(true);
   const [convertMessage, setConvertMessage] = useState<string>("");
