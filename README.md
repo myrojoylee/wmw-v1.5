@@ -2,11 +2,15 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A frontend weather app written in React + TypeScript! What's different in this version versus the one I did before? We the entire app to be in TypeScript!
+A frontend weather app written in React + TypeScript + Tailwind! What's different in this version versus the one I did before? We refactored the entire app to be in TypeScript with Tailwind as the CSS framework!
 
 ## Usage
 
 This work in progress can be found deployed [here](https://wmw-v1.netlify.app/).
+
+Demo below:
+
+<img src="https://github.com/myrojoylee/tic-tac-toe/blob/main/src/assets/wmw-v1-demo.gif" width = "400" />
 
 ## Improvements
 
