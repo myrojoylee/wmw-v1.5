@@ -1,38 +1,5 @@
 import { useReducer } from "react";
-
-interface WeatherState {
-    conditions: WeatherConditionsType | null,
-    cityInfo: any;
-}
-
-type CityInfoType = {
-    country: string;
-    lat: number;
-    lon: number;
-    name: string;
-    state: string;
-};
-
-type WeatherConditionsType = {
-    dt: number;
-    name: string;
-    main: {
-        humidity: number;
-        temp: number;
-    };
-    sys: {
-        country: string;
-    };
-    weather: {
-        0: {
-            description: string;
-            icon: string;
-        };
-    };
-    wind: {
-        speed: number;
-    };
-};
+import { WeatherState } from "./types";
 
 const initialWeatherState = {
     conditions: null,
@@ -45,12 +12,12 @@ const initialWeatherState = {
     }
 };
 
-interface UpdateWeatherAction {
+export interface UpdateWeatherAction {
     type: "UPDATE_CURRENT_WEATHER",
     payload: any
 }
 
-type ReducerAction = UpdateWeatherAction;
+export type ReducerAction = UpdateWeatherAction;
 
 export function weatherReducer(state: WeatherState, action: ReducerAction) {
     switch (action.type) {
