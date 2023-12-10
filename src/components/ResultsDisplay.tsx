@@ -17,7 +17,6 @@ export const ResultsDisplay = ({ conditions, cityInfo }: any) => {
         } else {
             setVerdict(Verdict.Freezing);
         }
-
     };
 
     // unit conversion
@@ -38,8 +37,8 @@ export const ResultsDisplay = ({ conditions, cityInfo }: any) => {
     }
 
     return (
-        <>
-            <section className="flex flex-col w-3/4">
+        <article className="w-2/3 flex-column justify-center">
+            <section className="flex flex-col w-3/4 mx-auto">
                 <p>
                     City:{" "}
                     <span className="font-mono">
@@ -67,7 +66,7 @@ export const ResultsDisplay = ({ conditions, cityInfo }: any) => {
                     </button>
                 </div>
             </section>
-            <p className="flex flex-col w-3/4">
+            <p className="flex flex-col w-3/4 mx-auto">
                 {verdict ||
                     <button
                         onClick={() => displayVerdict()}
@@ -77,7 +76,7 @@ export const ResultsDisplay = ({ conditions, cityInfo }: any) => {
                     </button>
                 }
             </p>
-        </>
+        </article>
     )
 
 

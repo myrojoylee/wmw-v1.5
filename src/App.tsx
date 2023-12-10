@@ -44,10 +44,12 @@ const App = (): JSX.Element => {
   // getting weather when you click button
   async function handleSubmit(input: string) {
     if (!input) {
-      setPlaceholder(`Can't be blank, silly :)`);
+      setPlaceholder("Can't be blank, silly :)");
       return;
     } else {
+      setPlaceholder("Type a city ... ")
       try {
+        setLoading(true)
 
         await getCurrentWeather();
 
@@ -63,13 +65,12 @@ const App = (): JSX.Element => {
   const { conditions, cityInfo } = weatherState;
 
   return (
-    <main className="flex justify-center items-center w-full flex-col h-[100vh] space-y-10 bg-gradient-to-r from-cyan-200 to-sky-400">
+    <main className="flex  items-center w-full flex-col h-[100vh] space-y-10 bg-gradient-to-r  from-cyan-200 to-sky-400">
       <Header />
       <InputForm setCitySearched={setCitySearched} placeholder={placeholder} />
       {!loading && <ResultsDisplay conditions={conditions} cityInfo={cityInfo} />}
     </main>
   );
 };
-
 
 export default App;
