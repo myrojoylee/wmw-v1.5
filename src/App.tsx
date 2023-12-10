@@ -16,6 +16,7 @@ const App = (): JSX.Element => {
       const response = await fetch(
         `https://api.openweathermap.org/geo/1.0/direct?q=${input}&appid=021e75b0e3380e236b4ff6031ae2dde4`
       );
+
       const data = await response.json();
 
       return data[0]

@@ -66,7 +66,7 @@ export const ResultsDisplay = ({ conditions, cityInfo }: any) => {
                     </button>
                 </div>
             </section>
-            <p className="flex flex-col w-3/4 mx-auto">
+            <p className="flex flex-col w-3/4 mx-auto mt-10 text-center">
                 {verdict ||
                     <button
                         onClick={() => displayVerdict()}
