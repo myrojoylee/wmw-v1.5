@@ -4,12 +4,12 @@ import Header from "./components/Header";
 
 const App = (): JSX.Element => {
   const [input, setInput] = useState<string>("");
-  const [cityInfo, setCityInfo] = useState<cityInfoType | any>("");
+  const [, setCityInfo] = useState<cityInfoType | any>("");
   const [currentWeather, setCurrentWeather] =
     useState<currentWeatherType | null>(null);
   const [verdict, setVerdict] = useState<string>("Loading...");
   const [placeholder, setPlaceholder] = useState<string>("Type a city");
-  const [temp, setTemp] = useState<number>();
+  const [, setTemp] = useState<number>();
   const [conversion, setConversion] = useState<boolean>(true);
   const [convertMessage, setConvertMessage] = useState<string>("");
   const [degreeUnit, setDegreeUnit] = useState<string>(" deg F");
